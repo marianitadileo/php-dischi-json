@@ -11,9 +11,34 @@
      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- AXIOS -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <header>
+            <div class="ms_head d-flex justify-content-center">
+                <h1 class="m-3 text-white">DISCOGRAPHY</h1>
+                <img class="m-4" src="img/spotify-logo.png" alt="logo">
+            </div>
+        </header>
+        <div class="ms_wrapper">
+            <main class="container">
+                <div class="row row-cols-3">
+                    <div class="col p-3" v-for="(disco, index) in dischi" :key="index">
+                        <div class="card ms_card h-100" style="width: 18rem;">
+                            <img class="p-4" :src="disco.poster" alt="poster-cd">
+                            <div class="card-body text-center">
+                                <h3> {{disco.title}} </h3>
+                                <p> {{disco.author}} </p>
+                                <p> {{disco.year}} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>  
+    </div>
 
    <script src="js/script.js"></script>
 </body>

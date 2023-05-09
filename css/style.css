@@ -1,0 +1,25 @@
+.ms_head {
+    height: 80px;
+    background-color: #06131F;
+}
+
+.ms_head img {
+    width: 30px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.ms_wrapper {
+    background-color: #1D2D3C;
+}
+
+.ms_card {
+    background-color: #06131F;
+    color: white;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.ms_card:hover {
+    transform: scale(1.2);
+}
